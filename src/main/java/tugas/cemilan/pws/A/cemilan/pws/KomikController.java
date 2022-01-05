@@ -8,8 +8,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,13 +40,13 @@ public class KomikController {
     }
     
     @PostMapping ("/komik")
-    public Komik saveKomikDetails(@RequestBody Komik o){
-        return komik.save(o);
+    public Komik saveKomikDetails(@RequestBody Komik s){
+        return komik.save(s);
     }
     
     @PutMapping("/komik")
-    public Komik updateKomik(@RequestBody Komik o){
-        return komik.save(o);
+    public Komik updateKomik(@RequestBody Komik s){
+        return komik.save(s);
     }
     
     @DeleteMapping("/komik/{idkomik}")
